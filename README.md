@@ -8,9 +8,9 @@ Arduino UNO R3 com sensor de temperatura LM35 de alta precisão, integrado a uma
 
 ## Funcionalidades
 
-✔️ Leitura contínua de temperatura (intervalo de 2 segundos)
-✔️ Alertas automáticos em caso de oscilação fora da faixa segura (2-8°C)
-✔️ Dashboard web em tempo real
+✔️ Leitura contínua de temperatura (intervalo de 2 segundos) <br>
+✔️ Alertas automáticos em caso de oscilação fora da faixa segura (2-8°C) <br>
+✔️ Dashboard web em tempo real <br>
 ✔️ Armazenamento histórico em banco de dados SQL, para auditorias
 
 ## Ferramentas utilizadas
