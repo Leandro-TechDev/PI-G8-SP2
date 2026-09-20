@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estoque</title>
+    <link rel="stylesheet" href="style2matheus.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Estoque de Vacinas</h1>
+        <h2>Configuração Inicial</h2>
+
+        <div class="vaccine-card">
+            <div class="card-header">Informações do Estoque</div>
+            <div class="card-body">
+                <div class="field-group">
+                    <select id="slc_vacina" onchange="verificar_outro()">
+                        <option selected>Selecione...</option>
+                        <option value="influenza">Influenza</option>
+                        <option value="pentavalente">Pentavalente</option>
+                        <option value="poliomielite">Poliomielite</option>
+                        <option value="pneumococica">Pneumocócica 10-Valente</option>
+                        <option value="triplice">Tríplice Viral</option>
+                        <option value="bcg">BCG</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div id="div_outro_1" class="field-group">
+                </div>
+
+                <div id="div_outro_2" class="field-group">
+                </div>
+
+                <div class="field-group">
+                    <label>Quantidade Atual:</label>
+                    <input type="number" id="ipt_qtd" placeholder="Ex: 10">
+                </div>
+            </div>
+        </div>
+
+        <button onclick="calcularEstoque()" class="btn-primary btn-calc">Calcular Perdas</button>
+
+        <div id="div_resultado"> </div>
+    </div>
+
+    <script>
+        function verificar_outro() {
+            if (slc_vacina.value === 'outro') {
+                div_outro_1.innerHTML = `<label>Informe o nome:</label>
+                <input type="text" id="ipt_nome_outro" placeholder='Ex: Hepatite B'>`
+
+                div_outro_2.innerHTML = `<label>Informe o valor unitário (R$):</label>
+                <input type="number" id="ipt_valor_outro" placeholder='Ex: 2.50'>`
+            } else {
+                div_outro_1.innerHTML = ''
+                div_outro_2.innerHTML = ''
+            }
+        }
+
+        function valor_vacinas() {
+
+            let valor_vacina = '0'
+            let nome_vacina = 'slc_opcioesVacinas.value'
+
+            if (nome_vacina == "influenza") {
+
+                valor_medio = 45
+
+            } else if (nome_vacina == "pentavalente") {
+
+                valor_medio = 170
+
+            } else if (nome_vacina == "poliomelite") {
+
+                valor_medio = 225
+
+            } else if (nome_vacina == "Pneumocócica 10-Valente") {
+
+                valor_medio = 475
+
+            } else if (nome_vacina == "Tríplice Viral") {
+
+                valor_medio = 130
+
+            } else if (nome_vacina == "BCG") {
+
+                valor_medio = 65
+
+            } else {
+
+                valor_medio = Number(ipt_valor_outro.value)
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
