@@ -123,6 +123,8 @@
                 div_resultado.innerHTML = '<b style="color: red">Insira o nome da vacina desejada.</b>'
             } else if (valor_medio <= 0) {
                 div_resultado.innerHTML = '<b style="color: red">Insira um valor de vacina maior do que 0.</b>'
+            } else if (String(quantidade).includes('.')) {
+                div_resultado.innerHTML = '<b style="color: red">Insira uma quantidade inteira.</b>'
             } else {
                 let qnt_vacinas_perdidas = quantidade * (percentual_perda / 100)
                 let qnt_reais_perdidos = qnt_vacinas_perdidas * valor_medio
