@@ -40,16 +40,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Painel Superior / Configuração Inicial */
-.input-group-top {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 15px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
 .top-field {
     display: flex;
     flex-direction: column;
@@ -57,17 +47,10 @@ h2 {
     gap: 5px;
 }
 
-label {
+.top-field label {
     font-size: 0.85rem;
     color: #1e293b;
     font-weight: 600;
-}
-
-/* Container do input de perda com o botão auxiliar */
-.perda-container {
-    display: flex;
-    gap: 8px;
-    align-items: center;
 }
 
 /* Selects */
@@ -81,8 +64,7 @@ select{
     width: 100%;
 }
 
-input[type="number"]:focus,
-input[type="text"]:focus {
+select:focus{
     border-color: #2563eb;
 }
 
@@ -101,15 +83,6 @@ input[type="text"] {
 input[type="number"]:focus,
 input[type="text"]:focus {
     border-color: #2563eb;
-}
-
-.ipt-tipos {
-    width: 110px;
-    text-align: center;
-}
-
-.ipt-perda {
-    width: 110px;
 }
 
 /* Botões Principais */
@@ -136,29 +109,6 @@ input[type="text"]:focus {
 .btn-calc {
     margin-top: 20px;
     margin-bottom: 25px;
-}
-
-/* Botão Secundário (Usar 41%) */
-.btn-secondary {
-    background-color: #e2e8f0;
-    color: #1e293b;
-    border: 1px solid #cbd5e1;
-    padding: 10px 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
-    background-color: #cbd5e1;
-    border-color: #94a3b8;
-}
-
-.btn-secondary:active {
-    transform: scale(0.97);
 }
 
 /* Cartões das Vacinas */
@@ -210,50 +160,23 @@ input[type="text"]:focus {
 
 /* Painel de Resumo e Resultados */
 .result-box {
+    margin-left: 20px;
     background-color: #f0f9ff;
     border: 2px solid #93c5fd;
     border-radius: 12px;
     padding: 20px;
     text-align: left;
     color: #1e293b;
-}
 
-.result-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #cbd5e1;
-    font-size: 0.95rem;
+    width: 100%;
 }
 
 .result-totals {
-    margin-top: 15px;
     padding-top: 10px;
     text-align: center;
     color: #003366;
 }
 
-.total-qty, 
-.total-val-bruto {
-    font-size: 1rem;
-    margin-bottom: 4px;
-}
-
-.total-loss {
-    color: #dc2626;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.total-val-liquido {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #059669;
-    border-top: 1px dashed #93c5fd;
-    padding-top: 8px;
-}
-
-.error-message {
-    color: #dc2626;
-    font-size: 1rem;
-    font-weight: 500;
+.caixa_pai{
+    display: flex;
 }
